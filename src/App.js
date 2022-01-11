@@ -24,10 +24,30 @@ function App() {
         }
     ]
   return (
-      <div>
-          <ExpenseItem title={ExpenseArr[0].name} price={ExpenseArr[0].price} dop={ExpenseArr[0].date} />
-          <ExpenseItem title={ExpenseArr[1].name} price={ExpenseArr[1].price} dop={ExpenseArr[1].date} />
-          <ExpenseItem title={ExpenseArr[2].name} price={ExpenseArr[2].price} dop={ExpenseArr[2].date} />
+      <div class="content">
+
+          <div class="container">
+              <h2 class="mb-5">Expense Table</h2>
+
+              <div class="table-responsive">
+
+                  <table class="table custom-table table-striped">
+                      <thead>
+                          <tr>
+
+                              <th scope="col">Order Name</th>
+                              <th scope="col">Price</th>
+                              <th scope="col">Date</th>
+                          </tr>
+                      </thead>
+                      <tbody>
+                          <ExpenseItem title={ExpenseArr[0].name} price={ExpenseArr[0].price} dop={ExpenseArr[0].date} />
+                          <ExpenseItem title={ExpenseArr[1].name} price={ExpenseArr[1].price} dop={ExpenseArr[1].date} />
+                          <ExpenseItem title={ExpenseArr[2].name} price={ExpenseArr[2].price} dop={ExpenseArr[2].date} />
+                      </tbody>
+                  </table>
+              </div>
+              </div>
       </div>
   );
 }
