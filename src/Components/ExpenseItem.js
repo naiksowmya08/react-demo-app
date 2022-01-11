@@ -1,4 +1,6 @@
 import 'bootstrap/dist/css/bootstrap.min.css';
+//import './ExpenseSub';
+import ExpenseSub from './ExpenseSub';
 function ExpenseItem(props) {
     const outborder = {
         border: '5px solid #17bfcc',
@@ -17,6 +19,7 @@ function ExpenseItem(props) {
                     <div className="col-md-4 divStyle">
                         <p>{props.dop}</p>
                     </div>
+                    <ExpenseSub/>
                 </div>
             </div>
 
