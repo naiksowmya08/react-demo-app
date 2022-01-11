@@ -34,7 +34,6 @@ function App() {
                   <table class="table custom-table table-striped">
                       <thead>
                           <tr>
-
                               <th scope="col">Order Name</th>
                               <th scope="col">Price</th>
                               <th scope="col">Date</th>
