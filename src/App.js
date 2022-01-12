@@ -2,6 +2,7 @@ import './App.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './index.css';
 import ExpenseItem from './Components/ExpenseItem';
+import NewItem from './Components/NewItem/NewItem';
 function App() {
     const outborder = {
         border: '5px solid #17bfcc',
@@ -27,6 +28,7 @@ function App() {
       <div class="content">
 
           <div class="container">
+              <NewItem/>
               <h2 class="mb-5">Expense Table</h2>
 
               <div class="table-responsive">
