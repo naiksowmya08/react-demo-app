@@ -26,6 +26,7 @@ function ItemForm(props) {
             date: enterDate
         }
        // console.log(saveArr);
+        //leveling data to one level up
         props.onNewData(saveArr);
         setEnterName('');
         setEnterPrice('');
