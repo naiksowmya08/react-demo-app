@@ -1,9 +1,16 @@
 import ItemForm from './ItemForm';
 function NewItem() {
 
+    function NewAvailData(ExpenseNewData) {
+        const TableNewData = {
+            ...ExpenseNewData
+        };
+        console.log(TableNewData);
+    }
+
     return (
         <div>
-            <ItemForm />
+            <ItemForm onNewData={NewAvailData}/>
         </div>
     );
 

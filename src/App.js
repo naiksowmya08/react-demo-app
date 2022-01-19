@@ -1,8 +1,9 @@
 import './App.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './index.css';
-import ExpenseItem from './Components/ExpenseItem';
+import ExpenseMain from './Components/ExpenseMain';
 import NewItem from './Components/NewItem/NewItem';
+
 function App() {
     const outborder = {
         border: '5px solid #17bfcc',
@@ -23,12 +24,24 @@ function App() {
             price: 500,
             date: "20-10-2021"
         }
-    ]
+    ];
+    function NewExpenseArr(props) {
+        const NewAddExpense = {
+            ...ExpenseArr,
+        
+            name: props.name,
+                price: props.price,
+                    date: props.date
+
+             
+    }
+        console.log(NewAddExpense);
+    }
   return (
       <div class="content">
 
           <div class="container">
-              <NewItem/>
+              <NewItem newDataArr={NewExpenseArr}/>
               <h2 class="mb-5">Expense Table</h2>
 
               <div class="table-responsive">
@@ -41,11 +54,9 @@ function App() {
                               <th scope="col">Date</th>
                           </tr>
                       </thead>
-                      <tbody>
-                          <ExpenseItem title={ExpenseArr[0].name} price={ExpenseArr[0].price} dop={ExpenseArr[0].date} />
-                          <ExpenseItem title={ExpenseArr[1].name} price={ExpenseArr[1].price} dop={ExpenseArr[1].date} />
-                          <ExpenseItem title={ExpenseArr[2].name} price={ExpenseArr[2].price} dop={ExpenseArr[2].date} />
-                      </tbody>
+                      
+                          <ExpenseMain dataArr={ExpenseArr}></ExpenseMain>
+                     
                   </table>
               </div>
               </div>
