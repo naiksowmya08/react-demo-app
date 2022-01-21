@@ -23,7 +23,8 @@ function ItemForm(props) {
         const saveArr = {
             name: enterName,
             price: enterPrice,
-            date: enterDate
+            date: enterDate,
+            id: Math.random()
         }
        // console.log(saveArr);
         //leveling data to one level up

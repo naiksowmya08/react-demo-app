@@ -1,11 +1,13 @@
 import ItemForm from './ItemForm';
-function NewItem() {
+function NewItem(props) {
 
     function NewAvailData(ExpenseNewData) {
-        const TableNewData = {
-            ...ExpenseNewData
-        };
-        console.log(TableNewData);
+       // const TableNewData = {
+        //    ...ExpenseNewData
+        //};
+       // return TableNewData;
+        props.newDataArr(ExpenseNewData);
+       // console.log(TableNewData);
     }
 
     return (
