@@ -3,25 +3,26 @@ import './App.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './index.css';
 import ExpenseMain from './Components/ExpenseMain';
+import ExpenseFilter from './Components/ExpenseFilter';
 import NewItem from './Components/NewItem/NewItem';
 
-const ExpenseArr = [
+let ExpenseArr = [
     {
         name: "item1",
         price: 200,
-        date: "20-10-2021",
+        date: "2021-06-06",
         id: 1
     },
     {
         name: "item2",
         price: 300,
-        date: "20-11-2021",
+        date: "2020-02-08",
         id: 2
     },
     {
         name: "item3",
         price: 500,
-        date: "20-10-2021",
+        date: "2019-02-02",
         id: 3
     }
 ];
@@ -33,11 +34,17 @@ function App() {
     const [DynamicArr, SelectedArr] = useState(ExpenseArr);
     
     function NewExpenseArr(DataNew) {
-    
+        ExpenseArr = [DataNew, ...ExpenseArr];
         SelectedArr(prevState => {
             return [DataNew, ...DynamicArr]
         })
-        //console.log(DynamicArr);
+    }
+
+    function SelectFunc(ParseValue) {
+        let result = ExpenseArr.filter(({ date }) =>
+            ParseValue == +date.slice(0, 4) 
+        );
+        SelectedArr(result);
     }
   return (
       <div class="content">
@@ -45,7 +52,7 @@ function App() {
           <div class="container">
               <NewItem newDataArr={NewExpenseArr}/>
               <h2 class="mb-5">Expense Table</h2>
-
+              <ExpenseFilter NewSelectValue={SelectFunc}></ExpenseFilter>
               <div class="table-responsive">
 
                   <table class="table custom-table table-striped">
