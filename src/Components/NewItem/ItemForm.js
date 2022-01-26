@@ -7,8 +7,8 @@ function ItemForm(props) {
     const [enterDate, setEnterDate] = useState('');
     let l1 = { display: "none" };
     let l2 = { display: "block" };
-    const [displayValue, showDisplayValue] = useState(l1);
-    const [displayFormValue, showDisplayFormValue] = useState(l2);
+    const [displayValue, showDisplayValue] = useState(l2);
+    const [displayFormValue, showDisplayFormValue] = useState(l1);
 
 
     function nameInputHandler(event) {
