@@ -4,7 +4,16 @@ h1 {
     text-align: center;
     padding: 6px;
 }
-
+.cancel {
+    background-color: orangered;
+    color: white;
+    border: none;
+    padding: 6px 20px;
+    font-size: 110%;
+    border-radius: 10px;
+    font-family: Rockwell, georgia, serif;
+    margin-top: 45px;
+}
 .outBox {
     background-color: white;
     font-family: Rockwell, Georgia, serif;

@@ -47,15 +47,15 @@ function App() {
         SelectedArr(result);
     }
   return (
-      <div class="content">
+      <div className="content">
 
-          <div class="container">
+          <div className="container">
               <NewItem newDataArr={NewExpenseArr}/>
-              <h2 class="mb-5">Expense Table</h2>
+              <h2 className="mb-5">Expense Table</h2>
               <ExpenseFilter NewSelectValue={SelectFunc}></ExpenseFilter>
-              <div class="table-responsive">
+              <div className="table-responsive">
 
-                  <table class="table custom-table table-striped">
+                  <table className="table custom-table table-striped">
                       <thead>
                           <tr>
                               <th scope="col">Order Name</th>
