@@ -27,9 +27,9 @@ let ExpenseArr = [
     }
 ];
 function App() {
-    const outborder = {
-        border: '5px solid #17bfcc',
-    };
+    // const outborder = {
+    //     border: '5px solid #17bfcc',
+    // };
 
     const [DynamicArr, SelectedArr] = useState(ExpenseArr);
     
@@ -42,7 +42,7 @@ function App() {
 
     function SelectFunc(ParseValue) {
         let result = ExpenseArr.filter(({ date }) =>
-            ParseValue == +date.slice(0, 4) 
+            ParseValue === +date.slice(0, 4) 
         );
         SelectedArr(result);
     }

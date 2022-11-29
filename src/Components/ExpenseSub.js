@@ -1,7 +1,7 @@
 function ExpenseSub() {
-    const HrColor = {
-        color: 'red'
-    };
+    // const HrColor = {
+    //     color: 'red'
+    // };
     return (
         <div>
             <hr className='HrColor'/>
